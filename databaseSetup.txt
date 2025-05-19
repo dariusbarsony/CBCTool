@@ -1,0 +1,68 @@
+CREATE TABLE TARGET (
+    TargetID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL
+);
+
+CREATE TABLE EIGENSCHAP (
+    EigID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL
+);
+
+CREATE TABLE HEEFT (
+    HeeftID INTEGER PRIMARY KEY AUTOINCREMENT,
+    TargetID INTEGER NOT NULL,
+    EigID INTEGER NOT NULL,
+    Weight REAL NOT NULL,
+    Min REAL NOT NULL,
+    Max REAL NOT NULL,
+    FOREIGN KEY (TargetID) REFERENCES TARGET (TargetID),
+    FOREIGN KEY (EigID) REFERENCES EIGENSCHAP (EigID)
+);
+
+INSERT INTO TARGET (TargetID, Name) VALUES (1,'Bomengrond');
+INSERT INTO TARGET (TargetID, Name) VALUES (2,'Bomengrond op zandgrond');
+INSERT INTO TARGET (TargetID, Name) VALUES (3,'Bomengrond op kleigrond');
+
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (1, 'Zeefkromme: M50 van zand fractie');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (2, 'Zeefkromme: D60/D10 ratio');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (3, 'Fractie tot 1 mm');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (4, 'Fractie tot 250 um');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (5, 'Fractie tot 63 um (zand)');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (6, 'Fractie tot 20 um (silt)');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (7, 'Fractie tot 2 um (lutum)');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (8, 'Leemfractie (=lutum+silt)');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (9, 'Organische Stof');
+INSERT INTO EIGENSCHAP (EigID, Name) VALUES (10, 'Grof');
+
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,1,1,150,250);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,2,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,3,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,4,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,5,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,6,1,0,7);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,7,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,8,1,10,35);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,9,1,4,10);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (1,10,1,0,10);
+
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,1,1,90,200);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,2,1,5,10000);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,3,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,4,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,5,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,6,1,5,12);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,7,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,8,1,17,35);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,9,1,4,10);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (2,10,1,0,10);
+
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,1,1,80,10000);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,2,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,3,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,4,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,5,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,6,1,8,18);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,7,1,0,40);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,8,0,0,0);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,9,1,4,10);
+INSERT INTO HEEFT (TargetID,EigID,Weight,Min,Max) VALUES (3,10,1,0,10);
