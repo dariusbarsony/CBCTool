@@ -1,6 +1,13 @@
 # database package
 import sqlite3
 import csv
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python3 cbcTool.py <sample.csv>")
+    sys.exit(1)
+
+inputFile = sys.argv[1]
 
 ## table read function
 def getTable(table,add):
@@ -37,7 +44,7 @@ heeft = getTable("HEEFT",0)
 sample = {}
 
 # read csv
-with open('monster_8515374.csv', newline='') as csvfile:
+with open(inputFile, newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         for e in eigenschap:
