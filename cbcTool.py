@@ -3,6 +3,8 @@ import sqlite3
 import csv
 import sys
 
+# this is a test line
+
 if len(sys.argv) != 2:
     print("Usage: python3 cbcTool.py <sample.csv>")
     sys.exit(1)
