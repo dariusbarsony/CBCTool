@@ -1,0 +1,25 @@
+Here are the CSV files for each sample based on the provided data:
+
+### Sample ALE5_OW_MV01_S (8515374)
+```csv
+Zeefkromme: M50 van zand fractie,Zeefkromme: D60/D10 ratio,Fractie tot 1 mm,Fractie tot 250 um,Fractie tot 63 um,Fractie tot 20 um,Fractie tot 2 um,Leemfractie,Organische Stof,Grof,Bodemvreemd
+,,71.0,48.0,29.1,26.3,44.1,,25.1,,
+```
+
+### Sample ALE5_OW_MV02_S (8515375)
+```csv
+Zeefkromme: M50 van zand fractie,Zeefkromme: D60/D10 ratio,Fractie tot 1 mm,Fractie tot 250 um,Fractie tot 63 um,Fractie tot 20 um,Fractie tot 2 um,Leemfractie,Organische Stof,Grof,Bodemvreemd
+,,74.4,40.1,16.0,14.3,15.4,,26.9,,
+```
+
+### Sample ALE5_OW_MV03_S (8515376)
+```csv
+Zeefkromme: M50 van zand fractie,Zeefkromme: D60/D10 ratio,Fractie tot 1 mm,Fractie tot 250 um,Fractie tot 63 um,Fractie tot 20 um,Fractie tot 2 um,Leemfractie,Organische Stof,Grof,Bodemvreemd
+,,78.0,42.0,21.3,19.1,9.6,,16.2,,
+```
+
+### Notes:
+1. The fields "Zeefkromme: M50 van zand fractie" and "Zeefkromme: D60/D10 ratio" are left blank as they were not provided in the data.
+2. "Leemfractie" is left blank as it was not explicitly mentioned in the data.
+3. "Grof" and "Bodemvreemd" are left blank as they were not provided in the data.
+4. The values are taken from the respective fields in the provided text for each sample.
