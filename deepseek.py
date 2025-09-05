@@ -26,14 +26,15 @@ def readData(filename):
     )
 
     tables = response.choices[0].message.content
-    print(tables)
-    
-    # find the required tables for a specific sample
-    output = re.findall("\((\d+)\)\n```csv\n([\s\S][^```]*)", tables)
 
+    # find the required tables for a specific sample
+    output = re.findall("```csv\n([\s\S][^```]*)", tables)
+
+    sample_n0 = 0
     # write sample output to csv files per sample
-    for sample, data in output:
+    for data in output:
         df = pd.read_csv(StringIO(data), header=0)
-        df.to_csv('data_sample_{}.csv'.format(sample))
+        df.to_csv('data_sample_{}.csv'.format(sample_n0))
+        sample_n0 +=1
 
 readData(filename2)
